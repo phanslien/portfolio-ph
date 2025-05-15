@@ -1,0 +1,39 @@
+@import "tailwindcss";
+
+@theme {
+  --color-purple: #afafda;
+  --color-orange: #3a3a65;
+  --color-lumber: #FADED2;
+  --color-light: #fff;
+  --color-dark: #0d0d0d;
+  --color-gradient-card: linear-gradient(to left bottom, #FADED2 0%, #afafda 100%);
+  --color-gradient: linear-gradient(to top, #afafda  0%, #afafda 100%);
+
+  --font-display: "Quicksand", sans-serif;
+  --font-work: "Work Sans", sans-serif;
+}
+.front {
+  background: var(--color-gradient);
+  color: #3a3a65
+  ;
+}
+
+
+.card-front{
+  background: var(--color-gradient-card);
+}
+
+.card-container.flipped .card {
+  transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+  backface-visibility: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+
+.card-back {
+  transform: rotateY(180deg);
+}
